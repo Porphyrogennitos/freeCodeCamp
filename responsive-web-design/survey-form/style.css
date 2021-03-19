@@ -1,0 +1,165 @@
+:root {
+  --color-black: rgb(0, 0, 0, 0.8);
+  --color-white: rgba(248, 243, 242, 1);
+  --color-red: rgba(186, 20, 28, 0.8);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(
+      to right bottom,
+      var(--color-black),
+      var(--color-red)
+    ),
+    url(https://www.itl.cat/pngfile/big/288-2887484_akatsuki-naruto.jpg)
+      center/cover no-repeat;
+  box-sizing: border-box;
+  color: var(--color-white);
+  font: 400 1.6rem/1.7 Lobster, sans-serif;
+  min-height: 100vh;
+}
+
+#header {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  height: 11vh;
+  justify-content: flex-end;
+}
+
+#title {
+  font-size: 3.2rem;
+  letter-spacing: 1.2rem;
+  line-height: 4rem;
+}
+
+#description {
+  font-size: 1.8rem;
+  letter-spacing: 0.6rem;
+  text-transform: uppercase;
+}
+
+/* FORM */
+
+#survey-form {
+  background-color: var(--color-black);
+  border-radius: 3px;
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: auto minmax(auto, 21.5rem);
+  justify-content: center;
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 57rem; 
+}
+
+.form:not(:first-child) {
+  margin-top: 1rem;
+}
+
+label:not(label[for*="wanted"]) {
+  display: inline-block;
+  text-align: right;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+input,
+select {
+  font: inherit;
+}
+
+input[type="number"] {
+  width: 6.5rem;
+}
+
+fieldset {
+  border: 1px solid var(--color-red);
+  grid-column: 2;
+}
+
+.wanted {
+  display: flex;
+  justify-content: space-around;
+}
+
+input[type="radio"] {
+  border: none;
+  width: auto;
+}
+
+.elements {
+  align-items: center; 
+  display: grid;
+  grid-template-columns: min-content 4rem;
+  justify-content: space-around;
+}
+
+.elements label:not(label[for*="wanted"]) {
+  text-align: left; 
+}
+
+label[for="story"] {
+  line-height: 1rem;
+}
+
+textarea {
+  font: inherit;
+  grid-column: 2;
+}
+
+button {
+  background-color: var(--color-red);
+  border: none;
+  border-radius: 3px;
+  color: var(--color-black);
+  cursor: pointer;
+  font: inherit;
+  grid-column: 2;
+  text-transform: uppercase;
+}
+
+button:hover {
+  filter: brightness(85%)
+}
+
+button:active {
+  transform: translateY(0.1rem);
+}
+
+@media screen and (max-width: 550px) {
+  #title {
+    font-size: 3rem;
+    letter-spacing: .8rem;
+  }
+  
+  #description {
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  #title {
+    font-size: 2.4rem;
+    letter-spacing: 0.6rem;
+  }
+  
+  #description {
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+  }
+}

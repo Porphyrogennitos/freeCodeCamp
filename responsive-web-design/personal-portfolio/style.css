@@ -1,0 +1,178 @@
+:root {
+  /* COLORS */
+  --buddha-gold: #c6a700;
+  --gold: #ffd700;
+  --tyrian-purple: #66023d;
+  
+  /* OTHERS */
+  --main-bg-color: var(--tyrian-purple);
+  --main-text-color: var(--gold);
+  
+  --nav-bg-color: var(--gold);
+  --nav-link-color: var(--tyrian-purple);
+  
+  --projects-header: var(--gold);
+  --projects-color: var(--gold);
+  --projects-color-hover: var(--buddha-gold);
+  
+  --profile-link-color: var(--gold);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+/*   outline: 1px solid yellow; */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font: 400 clamp(100%, 1.6rem + 2vw, 2.4vw)/1.7 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* NAVIGATION */
+
+.header {
+  position: sticky; 
+  top: 0;
+}
+
+.navbar {
+  background-color: var(--nav-bg-color);
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.nav-item {
+  padding: 1rem;
+}
+
+.nav-link {
+  color: var(--nav-link-color);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* MAIN */
+
+.main {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+/* WELCOME SECTION */
+
+.welcome-section {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.crown {
+  animation: 1s linear infinite alternate float;
+  position: relative;
+}
+
+.fa-crown {
+  font-size: 3rem;
+}
+
+.welcome-header {
+  font-size: 3.5rem;
+}
+
+.welcome-paragraph {
+  font-size: 2rem;
+  font-style: italic; 
+}
+
+/* PROJECTS SECTION */
+
+.projects-section {
+  height: 25vh;
+}
+
+.project-header {
+  border-bottom: 0.2rem solid var(--projects-header);
+  font-size: 3rem;
+  margin: 0 auto 3rem auto;
+  max-width: 12rem;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-row-gap: 2.5rem;
+  justify-items: center;
+}
+
+.project-tile {
+  text-align: center;
+}
+
+.project-link {
+  color: var(--project-color);
+  font-size: 1.8rem;
+}
+
+.project-link:hover {
+  color: var(--projects-color-hover);
+}
+
+/* CONTACT SECTION */
+
+.contact-section {
+  height: 35vh;
+  margin-top: 20rem;
+}
+
+.contact-header {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.contact-links {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.profile-link {
+  color: var(--profile-link-color);
+  font-size: 2.5rem;
+}
+
+/* ANIMATIONS */
+
+@keyframes float {
+  0% {
+    bottom: 0;
+  }
+  
+  100% {
+    bottom: 1rem;
+  }
+}
+
+/* QUERIES */
+
+@media (min-width: 56.25em) {
+  .contact-section {
+    margin-top: 30rem;
+  }
+}

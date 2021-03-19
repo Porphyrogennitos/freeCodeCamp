@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+:root {
+  --br-primary: 1rem;
+  --color-blue: 13, 94, 175;
+  --color-white: #fff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  min-height: 100%;
+}
+
+body {
+  background: linear-gradient(
+    to top left,
+    rgb(var(--color-blue)) 50%,
+    var(--color-white)
+  );
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  color: var(--color-white);
+  font: 1.6rem/1.7 Lato, sans-serif;
+  padding: 2rem 3rem 0;
+}
+
+/* HEADER */
+
+#title {
+  font-size: 2.4rem;
+  height: 15vh;
+  position: relative;
+}
+
+h1 {
+  left: 50%;
+  text-align: center;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+/* SECTION */
+
+#tribute-info {
+  display: grid;
+  grid-column-gap: 7rem;
+  grid-template-columns: auto 1fr;
+  height: auto;
+  margin: 0 auto;
+  max-width: 110rem;
+}
+
+/* IMAGE */
+
+#img-div {
+  margin-left: 2rem;
+}
+
+figure {
+  position: relative;
+}
+
+.responsive-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  border-radius: var(--br-primary);
+  width: 43rem;
+}
+
+#img-caption {
+  background-color: rgba(var(--color-blue), 0.35);
+  border-bottom-left-radius: var(--br-primary);
+  border-bottom-right-radius: var(--br-primary);
+  bottom: 0.001rem;
+  font-size: 2rem;
+  font-weight: 700;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+/* PARAGRAPH */
+
+#p-div {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column;
+  margin-right: 4.5rem;
+}
+
+p {
+  font-size: 1.8rem;
+  line-height: 3.5rem;
+  margin-top: -0.2rem;
+  position: relative;
+  text-align: justify;
+  top: -0.85rem;
+}
+
+#tribute-link:link,
+#tribute-link:visited {
+  background-color: rgba(var(--color-blue), 0.4);
+  border: 1px solid var(--color-white);
+  border-radius: var(--br-primary);
+  color: var(--color-white);
+  display: inline-block;
+  font-weight: 700;
+  margin-top: auto;
+  padding: 1.5rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+#tribute-link:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.3rem);
+}
+
+#tribute-link:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.1rem);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1103px) {
+  #tribute-info {
+    grid-column-gap: 5rem;
+  }
+
+  img {
+    width: 40rem;
+  }
+
+  #p-div {
+    margin-right: 2rem;
+  }
+
+  p {
+    line-height: 3.2rem;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  #tribute-info {
+    grid-column-gap: 3rem;
+  }
+
+  p {
+    line-height: 3rem;
+  }
+}
+
+@media screen and (max-width: 904px) {
+  img {
+    width: 38rem;
+  }
+
+  #p-div {
+    margin-right: auto;
+  }
+
+  p {
+    line-height: 2.7rem;
+  }
+}
+
+@media screen and (max-width: 832px) {
+  #img-div {
+    margin-left: auto;
+  }
+
+  img {
+    width: 35rem;
+  }
+
+  #tribute-link:link,
+  #tribute-link:visited {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 783px) {
+  #title {
+    height: 8vh;
+  }
+
+  h1 {
+    top: 30%;
+  }
+
+  #tribute-info {
+    grid-column-gap: 0;
+    grid-row-gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  #img-div {
+    margin: 0 auto;
+  }
+
+  img {
+    width: 25rem;
+  }
+
+  p {
+    line-height: 2.5rem;
+  }
+
+  #tribute-link:link,
+  #tribute-link:visited {
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 579px) {
+  #title {
+    font-size: 1.5rem;
+  }
+  
+  img {
+    width: 20rem;
+  }
+  
+  #img-caption {
+    font-size: 1.7rem;
+  }
+  
+  p {
+    line-height: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  #title {
+    height: 4vh;
+    font-size: 1.3rem;
+  }
+  
+  h1 {
+    top: 15%;
+  }
+}
+
+@media screen and (max-width: 386px) {
+  #title {
+    height: 3vh;
+    font-size: 1rem;
+  }
+  
+  img {
+    width: 15rem;
+  }
+  
+  #img-caption {
+    font-size: 1.3rem;
+  }
+  
+  p {
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+  }
+  
+  #tribute-link:link,
+  #tribute-link:visited {
+    font-size: 1.3rem;
+  }
+}

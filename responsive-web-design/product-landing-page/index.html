@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - FCC: Product Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header id="header">
+  <nav id="nav-bar">
+    <ul id="nav-list">
+      <li class="nav-item"><a href="#who-we-are" class="nav-link">Who we are</a></li>
+      <li class="nav-item"><a href="#members" class="nav-link">Members</a></li>
+      <li class="nav-item"><a href="#become-a-member" class="nav-link">Become a member</a></li>
+    </ul>
+  </nav>
+
+  <img src="https://i.pinimg.com/originals/f1/70/5d/f1705d27a52d50463771c425b64f4fbc.png" alt="logo" id="header-img">
+
+  <h1>Make the world a better place!</h1>
+</header>
+
+<main id="main">
+  <section id="who-we-are">
+    <div class="video-div">
+      <iframe id="video" src="https://www.youtube.com/embed/ux0Qnn2XEgM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <p>Akatsuki (暁, literally meaning: "Dawn" or "Daybreak") was a group of shinobi that existed outside the usual system of hidden villages. Over the course of several decades, Akatsuki took different forms and was led by different individuals. Though each iteration is viewed as either subversives or criminals, all seek to make the world a better place through their own means. Each Akatsuki tended to have multiple lairs across the world, inaccessible either due to their remoteness or the various security measures that protected them.</p>
+
+    <div class="btn-div">
+      <a href="https://naruto.fandom.com/wiki/Akatsuki" class="btn" target="_blank">Read more...</a>
+    </div>
+  </section>
+
+  <section id="members">
+    <table>
+      <colgroup span="2"></colgroup>
+      <tr>
+        <th>Name</th>
+        <th>Village of Origin</th>
+      </tr>
+      <tr>
+        <td>Deidara</td>
+        <td>Iwagakure</td>
+      </tr>
+      <tr>
+        <td>Hidan</td>
+        <td>Yugakure</td>
+      </tr>
+      <tr>
+        <td>Itachi Uchiha</td>
+        <td>Konohagakure</td>
+      </tr>
+      <tr>
+        <td>Kakuzu</td>
+        <td>Takigakure</td>
+      </tr>
+      <tr>
+        <td>Kisame Hoshigaki</td>
+        <td>Kirigakure</td>
+      </tr>
+      <tr>
+        <td>Konan</td>
+        <td>Amegakure</td>
+      </tr>
+      <tr>
+        <td>Nagato</td>
+        <td>Amegakure</td>
+      </tr>
+      <tr>
+        <td>Sasori</td>
+        <td>Sunagakure</td>
+      </tr>
+      <tr>
+        <td>Tobi</td>
+        <td>Konohagakure</td>
+      </tr>
+      <tr>
+        <td>Zetsu</td>
+        <td>None</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="become-a-member">
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+      <label for="name">Name:*</label>
+      <input type="text" id="name" name="name" placeholder="Name" required>
+      <label for="email">Email:*</label>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+      <label for="village">Origins:*</label>
+      <select id="village" name="village" required>
+        <option value="">-- Please choose an origin</option>
+        <option value="Konohagakure">Konohagakure</option>
+        <option value="Sunagakure">Sunagakure</option>
+        <option value="Otogakure">Otogakure</option>
+        <option value="Kumogakure">Kumogakure</option>
+        <option value="Kemurigakure">Kemurigakure</option>
+        <option value="Takigakure">Takigakure</option>
+        <option value="Yugagakure">Yugagakure</option>
+        <option value="Amegakure">Amegakure</option>
+        <option value="Kirigakure">Kirigakure</option>
+        <option value="Yukigakure">Yukigakure</option>
+        <option value="Takumigakure">Takumigakure</option>
+        <option value="Iwagakure">Iwagakure</option>
+        <option value="Kusagakure">Kusagakure</option>
+        <option value="Getsugakure">Getsugakure</option>
+        <option value="Hoshigakure">Hoshigakure</option>
+      </select>
+      <label for="message">Message:</label>
+      <textarea name="message" id="message" placeholder="Message"></textarea>
+
+      <input type="submit" id="submit">
+    </form>
+  </section>
+</main>
+<!-- partial -->
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+</body>
+</html>

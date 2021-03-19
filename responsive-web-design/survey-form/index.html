@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - FCC: Survey Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header id="header">
+  <h1 id="title">Become a Member</h1>
+
+  <p id="description">So we make the world a better place</p>
+</header>
+
+<main>
+  <form id="survey-form">
+    <label for="name" id="name-label">Name: *</label>
+    <input type="text" id="name" name="name" required placeholder="Name">
+
+    <label for="email" id="email-label">Email: *</label>
+    <input type="email" id="email" name="email" required placeholder="Email">
+
+    <label for="number" id="number-label">S-rank Jutsus: *</label>
+    <input type="number" min="1" max="1325" id="number" placeholder="Jutsus" name="number" required>
+
+    <label for="dropdown">Origins: *</label>
+    <select name="villages" id="dropdown" required>
+      <option value="">-- Please choose an origin</option>
+      <option value="Konohagakure">Konohagakure</option>
+      <option value="Sunagakure">Sunagakure</option>
+      <option value="Otogakure">Otogakure</option>
+      <option value="Kumogakure">Kumogakure</option>
+      <option value="Kemurigakure">Kemurigakure</option>
+      <option value="Takigakure">Takigakure</option>
+      <option value="Yugagakure">Yugagakure</option>
+      <option value="Amegakure">Amegakure</option>
+      <option value="Kirigakure">Kirigakure</option>
+      <option value="Yukigakure">Yukigakure</option>
+      <option value="Takumigakure">Takumigakure</option>
+      <option value="Iwagakure">Iwagakure</option>
+      <option value="Kusagakure">Kusagakure</option>
+      <option value="Getsugakure">Getsugakure</option>
+      <option value="Hoshigakure">Hoshigakure</option>
+    </select>
+
+    <fieldset>
+      <legend>Wanted</legend>
+      <div class="wanted">
+        <label for="wanted-y">
+          <input type="radio" id="wanted-y" name="wanted" value="Y" checked> Yes
+        </label>
+        <label for="wanted-n">
+          <input type="radio" id="wanted-n" name="wanted" value="N"> No
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Elements</legend>
+      <div class="elements">
+        <label for="water">Water</label>
+        <input type="checkbox" id="water" name="element" value="value">
+        <label for="win">Wind</label>
+        <input type="checkbox" id="win" name="element" value="wind">
+        <label for="lightning">Lightning</label>
+        <input type="checkbox" id="lightning" name="element" value="lightning">
+        <label for="fire">Fire</label>
+        <input type="checkbox" id="fire" name="element" value="fire">
+        <label for="earth">Earth</label>
+        <input type="checkbox" id="earth" name="element" value="earth">
+      </div>
+    </fieldset>
+
+    <label for="story">Tell us your story:</label>
+    <textarea id="story" cols="5" rows="5" name="story"></textarea>
+
+    <button id="submit">Submit</button>
+  </form>
+</main>
+<!-- partial -->
+  
+</body>
+</html>
